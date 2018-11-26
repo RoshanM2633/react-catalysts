@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* starts here */
+/* service page css */
+
+/* recruitment service css */
+
+.service-img-wrap {
+  width:49%;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.service-img-wrap img {
+  width: 100%;
+}
+
+.service-keypoint {    
+  width:49%;
+  padding: 10px 20px ;
+  float: right;
+  list-style: none;
+}   
+
+.serv-over-img {
+    padding: 10px 20px;
+    width: 100%;
+    top:0;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.serv-over-img h3 {
+  font:600 20px arial,sans-serif;
+  color:#fff;
+
+}
+
+.serv-over-img p {
+    margin: 10px 0 0 10px;
+    font-size: 15px;
+    color: #fff;
+}
+.single-service .written-data > p {
+    margin-bottom: 30px;
+}
+
+
+.service-keypoint li p:before {
+    content: '\f101';
+    font-family: 'fontAwesome';
+    margin-right: 10px;
+}
+
+.single-service h4{
+  font:600 18px arial,sans-serif;
+  color:#555;
+
+}
+
+.sub-list {
+    margin: -10px 0 10px 50px;
+    list-style: none;
+}
+
+.sub-list span {
+    font:500 15px arial,sans-serif;
+    color:#807474;
+}
+
+/* about us page css */
+
+.about-persons {
+  width:100%;
+  padding:20px 0;
+}
+
+.about-persons h3 {
+  padding:10px;
+ text-align: left;
+ font:600 21px arial,sans-serif; 
+ position: relative;
+}
+.about-persons h3:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  padding: 2px;
+  bottom: 0;
+  left: 10px;
+  background-color: #50a7df;
+}
+
+.about-persons .wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.person-list>li{
+  width: 30%;
+  min-height:620px;
+  padding: 10px 15px;
+  margin:20px 1.5%;
+  display: inline-block;
+  border: 1px solid #555;
+  vertical-align: top;
+ -webkit-box-shadow: -8px -8px 6px -5px #555;
+  -moz-box-shadow: -8px -8px 6px -5px #555;
+  -ms-box-shadow: -8px -8px 6px -5px #555;
+  -o-box-shadow: -8px -8px 6px -5px #555;
+  box-shadow: -8px -8px 6px -5px #555;
+}
+
+.profile-img-wrap {
+  width: 100%;
+  margin-bottom:10px;
+  max-height: 320px;  
+  overflow: hidden;
+}
+
+.profile-img-wrap img {
+  width: 100%;
+}
+
+.pro-content p{
+  margin: 10px 0;
+  font-size:15px;
+  letter-spacing: 1px;
+}
+
+.work-prof {
+  margin: 5px 0 10px;
+  display: block;
+  font:600 13px arial,sans-serif; 
+  color: gray;
+}
+
+.social-connect{
+  list-style:none;
+}
+
+.connect-site{
+  font-size:13px;
+  color:gray;
+}
+
+.social-connect li {
+  display:inline-block;
+  margin:10px;
+}
+
+.social-connect li a {
+  padding:5px;
+  font-size: 20px;
+}
+
+
+.pro-content h4 {
+  padding: 10px 0 0;
+  font:600 18px arial,sans-serif; 
+}
+
+
+.about-persons .section-head {
+  padding-top:0;
+  text-align:center;
+}
+
+.about-persons .wrapper .section-head:after {
+  /* left:0 ; */
+  right:0;
+}
+
+
+
+/* contact page css */
+
+.catalyst-contact{
+  padding:20px 0;
+  width: 100%
+}
+
+.catalyst-contact .wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.location-map {
+  border:10px solid #50a7df;
+  overflow: hidden;
+  width: 49%;
+  display: inline-block;
+}
+
+.contact-us {
+  width: 49%;
+  padding: 10px 20px;
+  float: right;
+  background-color: #f2f9fb;
+
+}
+
+.cata-link {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  list-style: none;
+}
+
+.cata-link li {
+  margin:20px 0;
+}
+
+.cata-link li a {
+  text-decoration: none;
+  color:#50a7df;
+}
+
+.cata-link .phone-sym:before,
+.cata-link .mail-sym:before{
+  color:#50a7df;
+}
+
+.cata-link .foot-addr:before {
+  color:#555;
+}
+
+.contact-form {
+  padding: 10px;
+  width:50%;
+  float: right;
+}
+
+.enter-form {
+  width:90%;
+  margin: 20px auto;
+}
+
+.enter-form textarea,
+.enter-form input {
+  padding: 8px;
+  width:100%;
+  border:none;
+  border-radius:4px;
+  resize: vertical;
+}
+
+
+.mapouter {
+  height: 500px;
+  width: 600px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 600px;
+}
+
+
+
+
