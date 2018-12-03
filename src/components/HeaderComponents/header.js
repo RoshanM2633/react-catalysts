@@ -73,7 +73,7 @@ class Header extends React.Component{
                         </div>
                        <ul className="nav-menu"> 
                             <li>
-                                <Link to= "/home/"  label="Home" >Home</Link>
+                                <Link to= "/"  label="Home" >Home</Link>
                             </li>
                             <li>
                                 <Link to="/about/"   label="About" >About</Link>

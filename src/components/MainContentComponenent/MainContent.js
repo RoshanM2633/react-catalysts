@@ -16,7 +16,7 @@ class MainContent extends React.Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path="/home" component={HomeComponent} />
+                    <Route exact path="/" component={HomeComponent} />
                     <Route path="/About/"  exact component={About} />
                     <Route path="/Contact/"  exact component={Contact} />
                     <Route path="/services/recruitment/" component={RecruitmentCompo} />

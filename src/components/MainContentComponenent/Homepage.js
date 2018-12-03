@@ -9,6 +9,10 @@ import Globe from '../../static/images/global.png';
 import RnD from '../../static/images/rnd-tech.png';
 import TestimonialSlider from './TestimonialSlider';
 
+import '../../assets/css/slider.css';
+
+
+
 class HomeComponent extends React.Component {
     render() {
         return (

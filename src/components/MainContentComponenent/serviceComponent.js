@@ -4,8 +4,59 @@ import Ai from '../../static/images/Aiimg.jpg';
 import Recruit from '../../static/images/recruitment.jpg';
 import TempStaff from '../../static/images/temp-staff.jpg';
 import Scholar from '../../static/images/Scholarship.jpg';
+import ServiceModal from './serviceModal';
 
 class ServiceComponent extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            opemMod:false,
+            heading:'',
+            para1:'',
+            para2:''
+        }
+
+        this.handleOpenMod=this.handleOpenMod.bind(this);
+        this.closeModal=this.closeModal.bind(this);
+    }
+
+    handleOpenMod(e) {
+
+
+        var service=e.target.closest('li');
+        console.log(service.querySelector('h3').innerHTML);
+
+
+        this.setState({
+            opemMod: true,
+            heading: service.querySelector('h3').innerHTML,
+            para1: service.querySelector('p.hidden-modal-data').innerHTML,
+            // para2: service.querySelector('p.data-rpo').innerHTML,
+        })
+
+       if( service.querySelector('p.data-rpo') )
+        this.setState ({para2: service.querySelector('p.data-rpo').innerHTML});
+    }
+
+    closeModal() {
+            console.log(this);
+    //    if(e.target.className === 'open-mod service-modal'){
+    //     // this.setState({
+    //     //     opneMod: false,
+    //     // });
+
+    //     console.log(this);
+    //    }
+
+        this.setState ({
+            opemMod:false,
+            heading:'',
+            para1:'',
+            para2:''
+        })
+    }
+
+
     render() {
         return(
           
@@ -16,7 +67,7 @@ class ServiceComponent extends React.Component {
 
         <ul className="service-list">
 
-          <li className="my-service">
+          <li className="my-service" onClick={this.handleOpenMod}>
             <div className="serv-img-wrap">
               <img src={Recruit} alt="Recrutment and RPO"/>
             </div>
@@ -37,7 +88,7 @@ class ServiceComponent extends React.Component {
               </p>
           </li>
 
-          <li className="my-service">
+          <li className="my-service"  onClick={this.handleOpenMod} >
               <div className="serv-img-wrap">
                 <img src={TempStaff} alt="Temporary staffing" />
               </div>
@@ -51,7 +102,7 @@ class ServiceComponent extends React.Component {
             </p>
           </li>
 
-          <li className="my-service">
+          <li className="my-service"  onClick={this.handleOpenMod}>
               <div className="serv-img-wrap">
                   <img src={Ai} alt="AI based recruitment" />
               </div>
@@ -61,7 +112,7 @@ class ServiceComponent extends React.Component {
               </p>
           </li>
 
-          <li className="my-service">
+          <li className="my-service"  onClick={this.handleOpenMod}>
               <div className="serv-img-wrap">
                   <img src={Scholar} alt="Scholarship" />
               </div>
@@ -72,6 +123,13 @@ class ServiceComponent extends React.Component {
           </li>
         </ul>
       </div>
+            
+            {
+                this.state.opemMod == true ? <ServiceModal isOpen={this.state}  closeHandler={this.closeModal} /> :false 
+            }
+
+      {/* {this.state.opneMod == true ?  <ContactPersonModal   closeHandler={this.closeModel} isOpen={this.state}/> : false } */}
+
     </section>  
     );
     }
